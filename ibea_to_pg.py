@@ -89,15 +89,6 @@ def readfile(line, cursor):
                 # для отслеживания из командной строки
                 print(f"{date_now} Добавлена линия {line}")
 
-        except psycopg2.InterfaceError as e:
-            cursor = conn.cursor()
-
-            e = str(e).replace("\n", " ")
-            logging.debug(
-                f"{line};{IBEA_ADDRESS.get(line)}; {e}",
-            )
-            print(f"{date_now} {line} Попытка переподключения")
-
         except Exception as e:
             e = str(e).replace("\n", " ")
             logging.debug(
