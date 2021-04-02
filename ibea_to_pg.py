@@ -6,6 +6,7 @@ from time import ctime, sleep
 import psycopg2
 import pandas as pd
 
+from datetime import datetime
 from settings import IBEA_ADDRESS, conn
 
 
@@ -55,6 +56,8 @@ def readfile(line, cursor):
                 # дата обновления файла
                 date_now = df.loc["dated"].iloc[0]
 
+                date_now_sys = str(datetime.today())[:-7]
+
                 # номер заказа / название работы
                 job = df.loc["Job"].iloc[0]
 
@@ -76,8 +79,8 @@ def readfile(line, cursor):
                 # запись в БД
                 cursor.execute(
                     f"""
-                    INSERT INTO ibea_agregate (line, line_side, date_now, job, start_time, last_part, total, rejected)
-                    VALUES {line_name, line, date_now, job, start_time, lastpart_time, total, rejected};
+                    INSERT INTO ibea_agregate (line, line_side, date_now, date_now_sys, job, start_time, last_part, total, rejected)
+                    VALUES {line_name, line, date_now, date_now_sys, job, start_time, lastpart_time, total, rejected};
                 """
                 )
 

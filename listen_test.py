@@ -10,7 +10,9 @@ curs = conn.cursor()
 curs.execute("LISTEN ibea_cont;")
 
 seconds_passed = 0
+
 print("Waiting for notifications on channel 'ibea_cont'")
+
 while 1:
     conn.commit()
     if select.select([conn], [], [], 5) == ([], [], []):
