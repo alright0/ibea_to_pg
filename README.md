@@ -21,6 +21,7 @@
 
 Также в Postgres были настроены уведомления(notify), отправляющие JSON с новыми записями. Вывод <a href="https://github.com/alright0/ibea_to_pg/blob/main/listen_test.py">скрипта</a> для тестирования этого функционала выглядит следующим образом:<br>
 <p align="center"><img width=700px src="https://user-images.githubusercontent.com/71926912/113445698-113bb000-93ff-11eb-8093-66ac1a7f2ded.PNG"></p>
+<p align="center"><img  src="https://user-images.githubusercontent.com/71926912/113448410-75ad3e00-9404-11eb-862d-926781f963dd.PNG"></p>
 
 В последствии его функциональность должна помочь снизить нагрузку на базу(в случаях, когда нужно получать последние измерения на камере, но не опрашивать таблицу регулярно) 
 
