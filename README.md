@@ -5,11 +5,11 @@
 Во время работы камера обновляет локальный csv файл статистики, доступный во внутренней сети по адресу "\\xx.xx.xx.xx\statistics\actual.csv". Скрипт опрашивает камеры, запуская для каждого из указанных адресов свой тред, который, 1 раз в указанный промежуток времени(60 сек), опрашивает свой адрес. 
 Если камера по адресу недоступна, скрипт пишет в лог соответствующее сообщение. Каждую успешную запись пишет в stdout:
 
-Структура лога:<br>
-<p align="center"><img width=700px src="https://user-images.githubusercontent.com/71926912/113443289-57dadb80-93fa-11eb-8fad-2812e1024191.PNG"></p>
-
 Вывод:<br>
 <p align="center"><img width=700px src="https://user-images.githubusercontent.com/71926912/113443505-ca4bbb80-93fa-11eb-955a-bc23c7185e15.PNG"></p>
+
+Структура лога:<br>
+<p align="center"><img width=700px src="https://user-images.githubusercontent.com/71926912/113443289-57dadb80-93fa-11eb-8fad-2812e1024191.PNG"></p>
 
 Структура таблицы в базе:<br>
 <p align="center"><img width=700px src="https://user-images.githubusercontent.com/71926912/113443619-04b55880-93fb-11eb-8a49-95712530bbe1.PNG"></p>
