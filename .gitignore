@@ -1,6 +1,6 @@
 .csv
 .xls*
-.bat*
+.bat
 settings.py
 
 # Byte-compiled / optimized / DLL files
